@@ -7,7 +7,39 @@ class Places:
         self.place = place
 
     def printinfo(self):
-        print(f"A(z) {self.name}-(o)t {self.builddate}-ben kezdték el építeni és {self.opening}-ben nyitották meg látogatásra, a {self.height}-magasságú építmény {self.place}-ban megtekinthető.")
+        print(f"A(z) {self.name}-(o)t {self.builddate}-ban kezdték el építeni és {self.opening}-ben nyitották meg látogatásra. A {self.height}-magasságú építmény {self.place}-ban megtekinthető.")
+
+    def printinfo_v2(self):
+        print(f"A(z) {self.name}-(o)t {self.builddate}-ben építették eleinte mint reklámfogás, majd {self.opening}-ben megújították erősebb fémből stb. A {self.height}-magasságú, 107-méter hosszú  építmény {self.place}-ben megtekinthető.")
+
+    def printinfo_v3(self):
+        print(f"A(z) {self.name}-(o)t {self.builddate}-körül építették, majd nyitott meg {self.opening}-ben. A {self.height}-magasságú építmény {self.place}-ban megtekinthető.")
+
+    def printinfo_v4(self):
+        print(f"A(z) {self.name}-(e)t {self.builddate}-körül kezdték el építeni és {self.opening}-ra lett kész. Magasságáról {self.height}. {self.place}-ban megtekinthető.")
+    
+    def printinfo_vers(self):
+        print(f"A(z) {self.name}-(o)t {self.builddate}-körül építették és {self.opening} fele bővítették. Magassága: {self.height}. {self.place}-ban megtekinthető.")
+
+    def printinfo_buda(self):
+        print(f"A(z) {self.name}-(a)t {self.builddate}-körül építették, majd a  {self.opening}-ban átalakították. Magassága kb.: {self.height}. {self.place}-ban megtekinthető.")
+    
+    def printinfo_freedom(self):
+        print(f"A(z) {self.name}-(o)t {self.builddate}-körül építették és {self.opening}-ban itt írták alá a függetlenségi nyilatkozatot. Magassága: {self.height}. {self.place}-ban megtekinthető.")
+
+    def printinfo_freedomszob(self):
+        print(f"A(z) {self.name}-(o)t {self.builddate}-körül építették Franciaországban és {self.opening}-ben adták át az Amerikai Egyesült Államoknak. Magassága: {self.height}. {self.place}-ban megtekinthető.")
+
+    def printinfo_reich(self):
+        print(f"A(z) {self.name}-(e)t {self.builddate}-ban kezdték építeni és {self.opening}-ben nyílt meg. Magassága: {self.height}. {self.place}-ben megtekinthető.")
+
+    def printinfo_obama(self):
+        print(f"A(z) {self.name}-(e)t {self.builddate}-ben építették és {self.opening}-ben került adásra :D . Magassága: {self.height}. {self.place}-ban megtekinthető.")
+
+    def printinfo_el(self):
+        print(f"A(z) {self.name}-(e)t {self.builddate}-ban kezdték építeni és {self.opening}-ben vették fel az UNESCO-ba. Magassága: {self.height}. {self.place}-ben megtekinthető.")
+    
+    
 
 eiffel = Places("Eiffel torony", "1887", "1889", "300m", "Párizs")
 holly_sign = Places("Hollywood felirat", "1923", "1978", "108m", "Los-Angeles")
@@ -16,11 +48,11 @@ stoneshit = Places("Stonehenge", "Kr.e. 2500", "Kr.e. 2100", "## nincs pontos ad
 miakhalifa = Places("Burdzs Kalifa", "2004", "2010", "830m", "Egyesült Arab Emírségek")
 piramis = Places("El Castillo", "500", "1988", "30m", "Mexikó")
 versailles = Places("Versailles-i kastély", "1631", "1688", "12.5m", "Versailles")
-budacastle = Places("Budai vár", "1300", "1400", "40m", "Buda")
-freedom = Places("Függetlenség Csarnok", "1753", "1753", "52m", "Philadelphia")
-freedomszobor = Places("Szabadság-szobor", "1875", "1886", "93m", "New York")
+budacastle = Places("Budai vár", "1300", "19.század", "40m", "Buda")
+freedom = Places("Függetlenség Csarnok", "1753", "1776", "52m", "Philadelphia")
+freedomszobor = Places("Szabadság-szobor", "1875", "1885", "93m", "New York")
 rejszstick = Places("Reichstag", "1884", "1999", "47m", "Berlin")
-obamasheesh = Places("Obama emlékmű", "2009", "2009", "60m", "USA")
+obamasheesh = Places("Obama emlékmű", "2009", "2009", "60m", "Family Guy")
 
 c_nevek = ["Eiffel torony","Hollywood felirat","Kolosszeum","Stonehenge","Burdzs Kalifa","El Castillo","Versailles-i kastély","Budai vár","Függetlenség Csarnok","Szabadság-szobor","Reichstag","Obama emlékmű"]
 
@@ -51,37 +83,37 @@ while True:
             eiffel.printinfo()
         
         elif x == "2" or x.upper() == c_nevek[1].upper():
-            eiffel.printinfo()
+            holly_sign.printinfo_v2()
     
         elif x == "3" or x.upper() == c_nevek[2].upper():
-            eiffel.printinfo()
+            kolosszeum.printinfo_v3()
     
         elif x == "4" or x.upper() == c_nevek[3].upper():
-            eiffel.printinfo()
+            stoneshit.printinfo_v4()
     
         elif x == "5" or x.upper() == c_nevek[4].upper():
-            eiffel.printinfo()
+            miakhalifa.printinfo()
     
         elif x == "6" or x.upper() == c_nevek[5].upper():
-            eiffel.printinfo()
+            piramis.printinfo_el()
     
         elif x == "7" or x.upper() == c_nevek[6].upper():
-            eiffel.printinfo()
+            versailles.printinfo_vers()
     
         elif x == "8" or x.upper() == c_nevek[7].upper():
-            eiffel.printinfo()
+            budacastle.printinfo_buda()
     
         elif x == "9" or x.upper() == c_nevek[8].upper():
-            eiffel.printinfo()
+            freedom.printinfo_freedom()
     
         elif x == "10" or x.upper() == c_nevek[9].upper():
-            eiffel.printinfo()
+            freedomszobor.printinfo_freedomszob()
     
         elif x == "11" or x.upper() == c_nevek[10].upper():
-            eiffel.printinfo()
+            rejszstick.printinfo_reich()
     
         elif x == "12" or x.upper() == c_nevek[11].upper():
-            eiffel.printinfo()
+            obamasheesh.printinfo_obama()
         
         else:
             print("NO DATA FOUND")
