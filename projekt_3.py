@@ -59,18 +59,18 @@ while True:
         y = random.choice(lista)
         
 
-        print('-------------%s. kérdésed-------------  \n -%s'.center(240)%(s,y))
-        x = input('A kérdésedre a válasz: ')
+        print('-------------%s. kérdésed-------------  \n-%s'.center(245)%(s,y))
+        x = input('A kérdésre a válasz: ')
 
         for i in range(0,len(lista)):
             if lista[i] == y:
                 talalat = i
 
         if x == valasz[talalat]:
-            print('✓✓✓✓✓✓✓✓✓✓✓✓✓✓ \n'.center(203))
+            print('✓✓✓✓✓✓✓✓✓✓✓✓✓✓\n'.center(230))
             jo = jo + 1
         else:
-            print(' X X X X X X X X X X X X X X X X X X X X X X X \n'.center(231))
+            print('X X X X X X X X X X X X X X X X X \n'.center(241))
 
         valasz.remove(valasz[talalat])
         lista.remove(y)
@@ -82,20 +82,5 @@ while True:
             break
     if s == 6:
         print('\n')
-        print(' ******Helyes találatok száma:  %s******'.center(212)%jo)
+        print(' ******Helyes találatok száma: %s ******'.center(240)%jo)
         break
-    
-        
-                
-    
-
-
-    
-
-
-
-
-
-
-
-
