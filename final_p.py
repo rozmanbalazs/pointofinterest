@@ -141,7 +141,7 @@ def filewrite():
 
 def quizgame():
     lista = ['Milyen magas az Obama-emlékmű?','Mikor KEZDTÉK EL építeni a Burdzs Kalifát?','A StoneHenge mikor készült el (Kr.e)?','A Reichstag mikor került megnyitásra?',
-                  'A Hollywood Táblának mi volt eredeti célja?',' ?','A Versailles-i kastély-t mikor bővítette az akkori uralkodó?','Hol épült eredetileg a Szabadságszobor, ami ma New Yorkban található?']
+                  'A Hollywood Táblának mi volt eredeti célja?','A Versailles-i kastély-t mikor bővítette az akkori uralkodó?','Hol épült eredetileg a Szabadságszobor, ami ma New Yorkban található?']
 
         #kérdésekre a válszok SORRENDBEN. pl: egyes kérdés?  hez az 1 tartozik
     valasz = ['60m','2004','2100','1999','Reklámfogás','1688','Franciaországban']
@@ -167,7 +167,7 @@ def quizgame():
                 if lista[i] == y:
                     talalat = i
 
-            if x == valasz[talalat]:
+            if x.upper() == valasz[talalat].upper():
                     print('✓✓✓✓✓✓✓✓✓✓✓✓✓✓\n'.center(230))
                     jo = jo + 1
             else:
