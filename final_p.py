@@ -140,11 +140,11 @@ def filewrite():
                 file.write(adatok[i])
 
 def quizgame():
-    lista = ['egyes kérdés?','kettes kérdés?','hármas kérdés?','négyes kérdés?',
-                  'ötös kérdés?','hatos kérdés?','hetes kérdés?','nyolcas kérdés?']
+    lista = ['Milyen magas az Obama-emlékmű?','Mikor KEZDTÉK EL építeni a Burdzs Kalifát?','A StoneHenge mikor készült el (Kr.e)?','A Reichstag mikor került megnyitásra?',
+                  'A Hollywood Táblának mi volt eredeti célja?',' ?','A Versailles-i kastély-t mikor bővítette az akkori uralkodó?','Hol épült eredetileg a Szabadságszobor, ami ma New Yorkban található?']
 
         #kérdésekre a válszok SORRENDBEN. pl: egyes kérdés?  hez az 1 tartozik
-    valasz = ['1','2','3','4','5','6','7','8']
+    valasz = ['60m','2004','2100','1999','Reklámfogás','1688','Franciaországban']
 
         #a while hoz változók
     s = 1
