@@ -1,4 +1,6 @@
 import random
+import webbrowser
+
 class Places:
     def __init__(self, név,  builddate, nyitás, magasság, hely):
         self.név = név
@@ -47,7 +49,7 @@ holly_sign = Places("Hollywood felirat", "1923", "1978", "108m", "Los-Angeles")
 kolosszeum = Places("Kolosszeum", "72", "81", "48m", "Róma")
 stoneshit = Places("Stonehenge", "Kr.e. 2500", "Kr.e. 2100", "## nincs pontos adat ##", "Anglia")
 miakhalifa = Places("Burdzs Kalifa", "2004", "2010", "830m", "Egyesült Arab Emírségek")
-piramis = Places("El Castillo", "500", "1988", "30m", "Mexikó")
+piramis = Places("Chichen Itza", "500", "1988", "30m", "Mexikó")
 versailles = Places("Versailles-i kastély", "1631", "1688", "12.5m", "Versailles")
 budacastle = Places("Budai vár", "1300", "19.század", "40m", "Buda")
 freedom = Places("Függetlenség Csarnok", "1753", "1776", "52m", "Philadelphia")
@@ -86,39 +88,51 @@ def info_box():
 
             if x == "1" or x.upper() == p_nevek[0].upper():
                 eiffel.printinfo()
+                webbrowser.open("https://www.toureiffel.paris/en")
             
             elif x == "2" or x.upper() == p_nevek[1].upper():
                 holly_sign.printinfo_v2()
+                webbrowser.open("https://www.hollywoodsign.org/")
         
             elif x == "3" or x.upper() == p_nevek[2].upper():
                 kolosszeum.printinfo_v3()
-        
+                webbrowser.open("https://parcocolosseo.it/en/visit/opening-times-and-tickets/")
+                
             elif x == "4" or x.upper() == p_nevek[3].upper():
                 stoneshit.printinfo_v4()
+                webbrowser.open("https://www.english-heritage.org.uk/visit/places/stonehenge/")
         
             elif x == "5" or x.upper() == p_nevek[4].upper():
                 miakhalifa.printinfo()
+                webbrowser.open("https://www.burjkhalifa.ae/en/")
         
             elif x == "6" or x.upper() == p_nevek[5].upper():
                 piramis.printinfo_el()
+                webbrowser.open("https://www.chichenitza.com/")
         
             elif x == "7" or x.upper() == p_nevek[6].upper():
                 versailles.printinfo_vers()
+                webbrowser.open("https://en.chateauversailles.fr/")
         
             elif x == "8" or x.upper() == p_nevek[7].upper():
                 budacastle.printinfo_buda()
+                webbrowser.open("https://www.budavarikapu.hu/index.php/hu/budai-var/latogatas-a-varban")
         
             elif x == "9" or x.upper() == p_nevek[8].upper():
                 freedom.printinfo_freedom()
+                webbrowser.open("https://www.nps.gov/inde/planyourvisit/independencehall.htm")
         
             elif x == "10" or x.upper() == p_nevek[9].upper():
                 freedomszobor.printinfo_freedomszob()
+                webbrowser.open("https://www.nps.gov/stli/index.htm")
         
             elif x == "11" or x.upper() == p_nevek[10].upper():
                 rejszstick.printinfo_reich()
+                webbrowser.open("https://www.bundestag.de/en/visittheBundestag/dome/registration-245686")
         
             elif x == "12" or x.upper() == p_nevek[11].upper():
                 obamasheesh.printinfo_obama()
+                webbrowser.open("https://youtu.be/U9u3bFfCcXY")
             
             else:
                 print("NO DATA FOUND")
