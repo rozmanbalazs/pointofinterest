@@ -199,7 +199,13 @@ def quizgame():
             break
         
 def datenum():
-    y = input('Add meg az évszámot: ')
+    while True:
+        try:
+            y = int(input('Add meg az évszámot: '))
+            break
+
+        except ValueError:
+            print("Hibás érték.")
 
     for i in range(0,len(evszamok)):
         for x in range(0,len(evszamok[i])):
