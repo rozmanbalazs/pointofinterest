@@ -65,8 +65,6 @@ calc = 0
 adatok = dict()
     
 def info_box():
-    global calc, p_nevek
-
     print("írd be a hely nevét vagy számát az ahhoz kapcsolódó információ lekéréséhez!\n")
     for x in range(0, len(p_nevek)):
         print(f"{x+1} - {p_nevek[x]}")
@@ -145,8 +143,6 @@ def info_box():
             print("### please answer y or n! ###")
 
 def filewrite():
-        global adatok, c_nevek
-
         for i in range(0,len(c_nevek)):
             adatok[i] =  c_nevek[i].név+': '+c_nevek[i].builddate+' ,'+c_nevek[i].nyitás+' ,'+c_nevek[i].magasság+' ,'+c_nevek[i].hely+'\n'
             
