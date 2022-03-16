@@ -199,7 +199,7 @@ def quizgame():
             break
         
 def datenum():
-    y = input('Add meg az évszámot')
+    y = input('Add meg az évszámot: ')
 
     for i in range(0,len(evszamok)):
         for x in range(0,len(evszamok[i])):
@@ -207,7 +207,7 @@ def datenum():
                 print(p_nevek[i])
                 break
 def onev():
-    y = input('Add meg az évszámot')
+    y = input('Add meg a nevet: ')
 
     for i in range(0,len(p_nevek)):
         if onevek[i] == y:
