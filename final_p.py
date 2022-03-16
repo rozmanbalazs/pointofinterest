@@ -59,6 +59,8 @@ obamasheesh = Places("Obama emlékmű", "2009", "2009", "60m", "Family Guy")
 
 c_nevek = [eiffel,holly_sign,kolosszeum,stoneshit,miakhalifa,piramis,versailles,budacastle,freedom,freedomszobor,rejszstick,obamasheesh]
 p_nevek = ["Eiffel torony","Hollywood felirat","Kolosszeum","Stonehenge","Burdzs Kalifa","El Castillo","Versailles-i kastély","Budai vár","Függetlenség Csarnok","Szabadság-szobor","Reichstag","Obama emlékmű"]
+evszamok = [['1887','1889'],['1923','1978'],['72','81'],['2500','2100'],['2004','2010'],['500','1988'],['1631','1688'],['1300','1900'],['1753','1756'],['1875','1885'],['1884','1999'],['2009','2009']] 
+onevek = []
 calc = 0
 adatok = dict()
     
@@ -199,8 +201,25 @@ def quizgame():
             print('\n')
             print('****** Helyes találatok száma: %s ******'.center(240)%jo)
             break
+        
+def datenum():
+    y = input('Add meg az évszámot')
 
-print('Válassz az alábbi opciók közül:\n1.Adatok fájlba való mentése\n2.Tudnivalók a nevezetességekről\n3.Kvíz indítása')
+    for i in range(0,len(evszamok)):
+        for x in range(0,len(evszamok[i])):
+            if evszamok[i][x] == y:
+                print(p_nevek[i])
+                break
+def onev():
+    y = input('Add meg az évszámot')
+
+    for i in range(0,len(p_nevek)):
+        if onevek[i] == y:
+            print(evszamok)
+
+            
+        
+print('Válassz az alábbi opciók közül:\n1.Adatok fájlba való mentése\n2.Tudnivalók a nevezetességekről\n3.Kvíz indítása\n4.Évszám szerinti keresés')
 
 while True:
     try:
@@ -217,9 +236,18 @@ while True:
         elif valasztas == 3:
             quizgame()
             break
+        elif valasztas == 4:
+            datenum()
+            break
+        elif valasztas == 5:
+            onev()
+            break
 
         else:
             raise ValueError
         
     except ValueError:
         print("> hibás érték!")
+
+
+    
