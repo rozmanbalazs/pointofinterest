@@ -209,7 +209,7 @@ def datenum():
 
     for i in range(0,len(evszamok)):
         for x in range(0,len(evszamok[i])):
-            if evszamok[i][x] == y:
+            if int(evszamok[i][x]) == y:
                 print(p_nevek[i])
                 break
 def onev():
