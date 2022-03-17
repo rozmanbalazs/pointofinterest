@@ -60,7 +60,7 @@ obamasheesh = Places("Obama emlékmű", "2009", "2009", "60m", "Family Guy")
 c_nevek = [eiffel,holly_sign,kolosszeum,stoneshit,miakhalifa,piramis,versailles,budacastle,freedom,freedomszobor,rejszstick,obamasheesh]
 p_nevek = ["Eiffel torony","Hollywood felirat","Kolosszeum","Stonehenge","Burdzs Kalifa","El Castillo","Versailles-i kastély","Budai vár","Függetlenség Csarnok","Szabadság-szobor","Reichstag","Obama emlékmű"]
 evszamok = [['1887','1889'],['1923','1978'],['72','81'],['2500','2100'],['2004','2010'],['500','1988'],['1631','1688'],['1300','1900'],['1753','1756'],['1875','1885'],['1884','1999'],['2009','2009']] 
-onevek = []
+onevek = ["Franciaország","Olaszország","Anglia",'Egyesült Arab Emírség',"Mexikó","Franciaország","Magyarország","Németország"]
 calc = 0
 adatok = dict()
     
@@ -213,15 +213,24 @@ def datenum():
                 print(p_nevek[i])
                 break
 def onev():
-    y = input('Add meg a nevet: ')
+    y = input('Adj meg egy ország nevet: ')
 
     for i in range(0,len(p_nevek)):
-        if onevek[i] == y:
-            print(evszamok)
+        if y.upper() == 'USA':
+            print(f"{p_nevek[1]},{p_nevek[8]},{p_nevek[9]},{p_nevek[11]}")
+            break
+        if y.upper() == onevek[i].upper():
+            p_nevek.remove("Hollywood felirat")
+            p_nevek.remove("Függetlenség Csarnok")
+            p_nevek.remove("Szabadság-szobor")
+            p_nevek.remove("Obama emlékmű")
+            print(p_nevek[i])
+            break
+
 
             
         
-print('Válassz az alábbi opciók közül:\n1.Adatok fájlba való mentése\n2.Tudnivalók a nevezetességekről\n3.Kvíz indítása\n4.Évszám szerinti keresés')
+print('Válassz az alábbi opciók közül:\n1.Adatok fájlba való mentése\n2.Tudnivalók a nevezetességekről\n3.Kvíz indítása\n4.Évszám szerinti keresés\n5.Ország szerinti keresés')
 
 while True:
     try:
