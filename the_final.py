@@ -228,7 +228,12 @@ def onev():
             break
 
 def file_info():
-    filewrite()
+    try:
+        f = open('celeb_adatok.txt','r')
+
+    except FileNotFoundError:
+        filewrite()
+    
     nlist = []
 
     f = open('celeb_adatok.txt','r')
